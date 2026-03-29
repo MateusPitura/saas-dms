@@ -9,7 +9,7 @@ import { GlobalProvider } from "./domains/global/contexts/GlobalContext";
 import { QueryKeys } from "./domains/global/types";
 import { router } from "./router";
 
-const queryClient = new QueryClient({ // 🌠 move to a file to reuse
+const queryClient = new QueryClient({ // 🌠 move to a file and use it instead of useQueryClient()
   defaultOptions: {
     queries: {
       refetchOnWindowFocus: false,
@@ -19,7 +19,7 @@ const queryClient = new QueryClient({ // 🌠 move to a file to reuse
   },
 });
 
-declare module "@tanstack/react-query" { // 🌠 move to a file
+declare module "@tanstack/react-query" { // 🌠 move to a file with QueryClient
   interface Register {
     queryKey: [QueryKeys, ...ReadonlyArray<unknown>];
   }
