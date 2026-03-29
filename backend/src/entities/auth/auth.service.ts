@@ -88,7 +88,7 @@ export class AuthService {
       httpOnly: true,
       secure: isProduction ? true : false,
       sameSite: isProduction ? 'none' : 'lax',
-    });
+    }); // 🌠 review this
 
     return res?.json(true);
   }

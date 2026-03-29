@@ -7,8 +7,7 @@ export const SEED_ROLE_SALES_ID = 2;
 
 export const JWT_COOKIE_NAME = "jwt";
 
-export const DOMAIN = "dms.mateuspitura.me";
-export const API_URL = `https://api.${DOMAIN}`;
+export const API_URL = `https://apidms.mateuspitura.com`;
 
 export const BACKEND_PORT = 3000;
 export const FRONTEND_PORT = 5173;

@@ -15,7 +15,3 @@
 
 // Import commands.js using ES2015 syntax:
 import "./commands";
-
-beforeEach(() => {
-  localStorage.setItem("DISABLE_AUDIT_DMS", "true");
-});

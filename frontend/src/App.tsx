@@ -7,10 +7,9 @@ import Snackbar from "./design-system/Snackbar";
 import { FilterProvider } from "./domains/global/contexts/FilterContext";
 import { GlobalProvider } from "./domains/global/contexts/GlobalContext";
 import { QueryKeys } from "./domains/global/types";
-import { auditInterceptor } from "./domains/global/utils/auditInterceptor";
 import { router } from "./router";
 
-const queryClient = new QueryClient({
+const queryClient = new QueryClient({ // 🌠 move to a file to reuse
   defaultOptions: {
     queries: {
       refetchOnWindowFocus: false,
@@ -20,15 +19,13 @@ const queryClient = new QueryClient({
   },
 });
 
-declare module "@tanstack/react-query" {
+declare module "@tanstack/react-query" { // 🌠 move to a file
   interface Register {
     queryKey: [QueryKeys, ...ReadonlyArray<unknown>];
   }
 }
 
 export default function App() {
-  auditInterceptor();
-
   return (
     <ErrorBoundary>
       <GlobalProvider>

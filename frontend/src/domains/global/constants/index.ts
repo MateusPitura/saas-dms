@@ -9,7 +9,7 @@ import {
 
 export const BLANK = " ";
 
-export const isProduction = import.meta.env.MODE === "production";
+const isProduction = import.meta.env.MODE === "production";
 
 export const BACKEND_URL = isProduction
   ? API_URL
