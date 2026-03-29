@@ -4,9 +4,8 @@ source .env
 
 # Configuration
 PUBLIC_KEY_PATH="$HOME/.ssh/oci.pub"
-PRIVATE_KEY_PATH="$HOME/.ssh/oci"
 LOCAL_PORT=$DATABASE_PORT
-DATABASE_PRIVATE_IP=10.0.2.50
+DATABASE_PRIVATE_IP=10.0.4.201
 
 # Check if argument is provided to return PID
 RETURN_PID=false

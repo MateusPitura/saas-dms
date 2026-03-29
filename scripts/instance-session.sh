@@ -13,11 +13,11 @@ PRIVATE_IP=""
 # Check first argument for target type
 if [[ "$1" == "-b" ]]; then
     INSTANCE_OCID=$BACKEND_OCID
-    PRIVATE_IP="10.0.3.197"
+    PRIVATE_IP="10.0.6.191"
     shift  # Remove -b from arguments
 elif [[ "$1" == "-d" ]]; then
     INSTANCE_OCID=$DATABASE_OCID
-    PRIVATE_IP="10.0.2.50"
+    PRIVATE_IP="10.0.4.201"
     shift  # Remove -d from arguments
 else
     echo "Error: Please specify target type:"

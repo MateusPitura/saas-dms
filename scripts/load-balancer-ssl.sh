@@ -9,7 +9,7 @@ CERT_NAME="cert-$(date +%Y%m%d)"
 PUBLIC_FILE_PATH="$HOME/Downloads/cert.pem"
 PRIVATE_FILE_PATH="$HOME/Downloads/privkey.pem"
 CA_FILE_PATH="$HOME/Downloads/fullchain.pem"
-LOAD_BALANCER_LISTNER_NAME="https-listener"
+LOAD_BALANCER_LISTENER_NAME="https-listener"
 BACKEND_SET_NAME="bs_lb_2023-0831-1920"
 
 echo "Generating new SSL certificate for load balancer..."
@@ -54,7 +54,7 @@ done
 oci lb listener update \
     --load-balancer-id "$LOAD_BALANCER_OCID" \
     --ssl-certificate-name "$CERT_NAME" \
-    --listener-name "$LOAD_BALANCER_LISTNER_NAME" \
+    --listener-name "$LOAD_BALANCER_LISTENER_NAME" \
     --protocol HTTP \
     --port 443 \
     --default-backend-set-name "$BACKEND_SET_NAME" \
