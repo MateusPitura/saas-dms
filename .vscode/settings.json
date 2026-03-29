@@ -1,8 +1,8 @@
 {
-    "rest-client.environmentVariables": {
-      "$shared": {
-        "BACKEND_URL": "http://localhost:3000"
-      }
+  "rest-client.environmentVariables": {
+    "$shared": {
+      "BACKEND_URL": "http://localhost:3000"
     }
-  }
-  
+  },
+  "cSpell.words": ["mateuspitura"]
+}

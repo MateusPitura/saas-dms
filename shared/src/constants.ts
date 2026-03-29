@@ -7,7 +7,7 @@ export const SEED_ROLE_SALES_ID = 2;
 
 export const JWT_COOKIE_NAME = "jwt";
 
-export const DOMAIN = "ziscar.me";
+export const DOMAIN = "dms.mateuspitura.me";
 export const API_URL = `https://api.${DOMAIN}`;
 
 export const BACKEND_PORT = 3000;

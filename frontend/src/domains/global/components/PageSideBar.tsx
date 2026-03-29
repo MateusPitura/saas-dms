@@ -63,7 +63,7 @@ function PageSideBar(): ReactElement {
         />
         {isSideMenuOpen && (
           <span className="text-headline-small text-neutral-100 flex items-center">
-            Ziscar
+            DMS
           </span>
         )}
       </div>

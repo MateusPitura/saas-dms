@@ -19,10 +19,10 @@ mkdir -p "$BACKUP_DIR"
 
 # Dump database from container
 echo "Creating Postgres backup..."
-docker exec -t ziscar_db pg_dump -U "$DB_USERNAME" "$DB_NAME" > "$BACKUP_PATH"
+docker exec -t dms_db pg_dump -U "$DB_USERNAME" "$DB_NAME" > "$BACKUP_PATH"
 
 # Upload to oci object storage
 echo "Uploading to OCI bucket..."
-oci os object put -bn "bucket-backup-ziscar-db" --file "$BACKUP_PATH" --name "$BACKUP_FILE"
+oci os object put -bn "bucket-backup-dms-db" --file "$BACKUP_PATH" --name "$BACKUP_FILE"
 
 echo "Backup completed successfully on $(date)"

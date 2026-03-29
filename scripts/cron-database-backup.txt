@@ -1,1 +1,1 @@
-0 4 * * * /home/ubuntu/ziscar/scripts/database-backup.sh
+0 4 * * * /home/ubuntu/saas-dms/scripts/database-backup.sh

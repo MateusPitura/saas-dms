@@ -12,7 +12,7 @@ import { Observable, tap } from 'rxjs';
 import { isProduction } from 'src/constants';
 import { AuthRequest } from '../auth/auth.type';
 
-const app = initializeApp({ projectId: 'project-ziscar' });
+const app = initializeApp({ projectId: 'project-dms' });
 const db = getFirestore(app);
 
 const HEALTH_CHECK_URL = '/';
@@ -27,20 +27,20 @@ export class AuditInterceptor implements NestInterceptor {
         const url = req?.url ?? null;
 
         if (
-          process.env.DISABLE_AUDIT_ZISCAR === 'true' ||
+          process.env.DISABLE_AUDIT_DMS === 'true' ||
           url === HEALTH_CHECK_URL ||
-          req.cookies['DISABLE_AUDIT_ZISCAR'] === 'true'
+          req.cookies['DISABLE_AUDIT_DMS'] === 'true'
         ) {
           return;
         }
 
-        let clientId = req.cookies['CLIENT_ID_ZISCAR'] as string;
+        let clientId = req.cookies['CLIENT_ID_DMS'] as string;
         if (!clientId) {
           clientId = nanoid();
 
           const res = context.switchToHttp().getResponse<Response>();
 
-          res?.cookie('CLIENT_ID_ZISCAR', clientId, {
+          res?.cookie('CLIENT_ID_DMS', clientId, {
             httpOnly: true,
             secure: isProduction ? true : false,
             sameSite: isProduction ? 'none' : 'lax',

@@ -180,7 +180,7 @@ export class AuthService {
         Redefinir senha
       </a>
       <p>Se você não solicitou a redefinição, ignore este e-mail.</p>
-      <p>Atenciosamente,<br/>Equipe Ziscar</p>
+      <p>Atenciosamente,<br/>Equipe DMS</p>
     </div>
   `,
     });
@@ -229,12 +229,12 @@ export class AuthService {
               </tr>
             </table>
             <p>Se você não solicitou a redefinição, ignore este e-mail.</p>
-            <p>Atenciosamente,<br/>Equipe Ziscar</p>
+            <p>Atenciosamente,<br/>Equipe DMS</p>
           </td>
         </tr>
         <tr>
           <td style="padding: 10px; text-align: center; font-size: 12px; color: #888;">
-            &copy; 2025 Ziscar. Todos os direitos reservados.
+            &copy; 2025 DMS. Todos os direitos reservados.
           </td>
         </tr>
       </table>

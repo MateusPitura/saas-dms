@@ -1,11 +1,11 @@
 services:
   test_database:
     image: postgres:16
-    container_name: test_ziscar_db
+    container_name: test_dms_db
     environment:
       - POSTGRES_USER=test_user
       - POSTGRES_PASSWORD=test_admin
-      - POSTGRES_DB=test_ziscar
+      - POSTGRES_DB=test_dms
       - PGPORT=9862
     volumes:
       - test-db-data:/var/lib/postgresql/data

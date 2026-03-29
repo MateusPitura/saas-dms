@@ -1,5 +1,5 @@
 {
-  "name": "ziscar",
+  "name": "dms",
   "private": true,
   "scripts": {
     "start": "npm run dev:db & npm --prefix frontend run dev & npm --prefix backend run dev",

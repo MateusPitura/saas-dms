@@ -18,8 +18,8 @@ interface Navigator {
 }
 
 export async function auditInterceptor(): Promise<void> {
-  if (localStorage.getItem("DISABLE_AUDIT_ZISCAR") === "true") {
-    let cookie = "DISABLE_AUDIT_ZISCAR=true; path=/;";
+  if (localStorage.getItem("DISABLE_AUDIT_DMS") === "true") {
+    let cookie = "DISABLE_AUDIT_DMS=true; path=/;";
     if (isProduction) {
       cookie += ` domain=.${DOMAIN};`;
     }
@@ -27,13 +27,13 @@ export async function auditInterceptor(): Promise<void> {
     return;
   }
 
-  const app = initializeApp({ projectId: "project-ziscar" });
+  const app = initializeApp({ projectId: "project-dms" });
   const db = getFirestore(app);
 
-  let clientId = localStorage.getItem("CLIENT_ID_ZISCAR");
+  let clientId = localStorage.getItem("CLIENT_ID_DMS");
   if (!clientId) {
     clientId = nanoid();
-    localStorage.setItem("CLIENT_ID_ZISCAR", clientId);
+    localStorage.setItem("CLIENT_ID_DMS", clientId);
   }
 
   const connection = (navigator as Navigator)?.connection;

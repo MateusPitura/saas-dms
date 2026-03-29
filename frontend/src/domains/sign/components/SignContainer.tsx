@@ -35,7 +35,7 @@ export default function SignContainer(): ReactNode {
 
   return (
     <div className="bg-slate-800 w-full h-screen flex justify-center items-center flex-col gap-4">
-      <span className="text-headline-large text-neutral-100">Ziscar</span>
+      <span className="text-headline-large text-neutral-100">DMS</span>
       <div className="border-b border-neutral-300 w-96" />
       {renderStep}
     </div>

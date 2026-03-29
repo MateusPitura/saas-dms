@@ -9,7 +9,7 @@ export const JWT_EXPIRATION_TIME = 43200; // 12h
 export const isProduction = process.env.NODE_ENV === 'production';
 
 export const FRONTEND_URL = isProduction
-  ? 'https://ziscar.me'
+  ? 'https://dms.mateuspitura.com'
   : `http://localhost:${FRONTEND_PORT}`;
 
 export const RANDOM_URL = 'http://localhost:8080';
