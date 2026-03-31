@@ -1,0 +1,1 @@
+import{r as o}from"./index-CeK-pKpB.js";import{i as r}from"./useDialog-Bv_m6voV.js";function n(){const t=o.useContext(r);if(!t)throw new Error("useDialogContext must be used within a DialogProvider");return t}export{n as u};
