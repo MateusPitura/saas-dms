@@ -77,7 +77,7 @@ export default function UsersTableActions({
     <Button
       tooltipMessage="Ativar"
       variant="quaternary"
-      onClick={mutate}
+      onClick={() => mutate()}
       state={isPending ? "loading" : undefined}
       resource="USERS"
       action="DELETE"

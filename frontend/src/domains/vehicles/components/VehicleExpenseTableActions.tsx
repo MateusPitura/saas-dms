@@ -33,7 +33,7 @@ export default function VehicleExpenseTableActions({
         method: "PATCH",
         resource: "VEHICLE_EXPENSE",
         action: "DELETE",
-      }
+      },
     );
   }
 
@@ -80,7 +80,7 @@ export default function VehicleExpenseTableActions({
     <Button
       tooltipMessage="Ativar"
       variant="quaternary"
-      onClick={mutate}
+      onClick={() => mutate()}
       state={isPending ? "loading" : undefined}
       resource="VEHICLE_EXPENSE"
       action="DELETE"

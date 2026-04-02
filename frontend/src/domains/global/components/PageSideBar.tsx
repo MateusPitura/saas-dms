@@ -13,7 +13,7 @@ import safeNavigate from "../utils/safeNavigate";
 
 function PageSideBar(): ReactElement {
   const [isSideMenuOpen, setIsSideMenuOpen] = useState(
-    window.innerWidth >= 1280 ? true : false
+    window.innerWidth >= 1280 ? true : false,
   );
 
   function handleToggleSideMenu() {
@@ -47,7 +47,7 @@ function PageSideBar(): ReactElement {
         "min-w-[5rem] max-w-[5rem] bg-slate-800 p-4 flex flex-col gap-4 overflow-y-auto transition-all duration-300 ease-in-out rounded-tr-md",
         {
           "!min-w-64 !max-w-64": isSideMenuOpen,
-        }
+        },
       )}
     >
       <div
@@ -74,7 +74,7 @@ function PageSideBar(): ReactElement {
           const hasPermission = checkPermission(
             userPermissions,
             route.resource,
-            route.action
+            route.action,
           );
 
           if (!hasPermission) return null;
@@ -97,7 +97,7 @@ function PageSideBar(): ReactElement {
         })}
       </div>
       <Button
-        onClick={mutate}
+        onClick={() => mutate()}
         variant="tertiary"
         iconLeft="Logout"
         label={isSideMenuOpen ? "Sair" : undefined}

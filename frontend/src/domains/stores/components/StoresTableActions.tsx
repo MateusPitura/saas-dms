@@ -78,7 +78,7 @@ export default function StoresTableActions({
     <Button
       tooltipMessage="Ativar"
       variant="quaternary"
-      onClick={mutate}
+      onClick={() => mutate()}
       state={isPending ? "loading" : undefined}
       resource="STORES"
       action="DELETE"

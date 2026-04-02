@@ -58,18 +58,19 @@ export default function VehiclesTableActions({
     });
   }
 
-  const { mutate: mutateEditVehicle, isPending: isPendingEditVehicle } = useMutation({
-    mutationFn: editVehicle,
-    onSuccess: () => {
-      showSuccessSnackbar({
-        title: `Veículo ${plateNumber} atualizado com sucesso`,
-      });
-      queryClient.invalidateQueries({
-        queryKey: ["vehicle", vehicleId],
-      });
-      queryClient.invalidateQueries({ queryKey: ["vehicles"] });
-    },
-  });
+  const { mutate: mutateEditVehicle, isPending: isPendingEditVehicle } =
+    useMutation({
+      mutationFn: editVehicle,
+      onSuccess: () => {
+        showSuccessSnackbar({
+          title: `Veículo ${plateNumber} atualizado com sucesso`,
+        });
+        queryClient.invalidateQueries({
+          queryKey: ["vehicle", vehicleId],
+        });
+        queryClient.invalidateQueries({ queryKey: ["vehicles"] });
+      },
+    });
 
   return isActive ? (
     <>
@@ -89,7 +90,7 @@ export default function VehiclesTableActions({
           tooltipMessage='Marcar como "Em Estoque"'
           variant="quaternary"
           iconLeft="NoCrash"
-          onClick={mutateEditVehicle}
+          onClick={() => mutateEditVehicle()}
           resource="VEHICLES"
           action="UPDATE"
           padding="none"
@@ -138,7 +139,7 @@ export default function VehiclesTableActions({
     <Button
       tooltipMessage="Ativar"
       variant="quaternary"
-      onClick={mutateEnableVehicle}
+      onClick={() => mutateEnableVehicle()}
       state={isPendingEnableVehicle ? "loading" : undefined}
       resource="VEHICLES"
       action="DELETE"
